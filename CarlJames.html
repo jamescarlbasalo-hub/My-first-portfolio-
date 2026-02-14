@@ -1,0 +1,274 @@
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+<body>
+   <div class="box" id="about">
+      <div class="box1">
+         <div class="logo">
+            <h1>J•C</h1>
+         </div>
+         <ul>
+            <li><a onclick="a()">ABOUT ME</a></li>
+            <li><a onclick="b()">PRODUCT</a></li>
+            <li><a onclick="c()">CONTACT</a></li>
+            <li><a>MY SKILLS</a></li>
+         </ul>
+      </div>
+      <div class="myName">
+         <h1>Zup, Im</h1>
+      </div>
+      <div class="myName2">
+         <h1 class="Jc">JAMES CARL</h1>
+      </div>
+      <div class="myName3">
+         <pre>
+            HRGEHSHDBSNSJbsbsbdbdbdhehsbxbb
+            bwjdjxbsnansnndndbsbebdbdbbdbsb
+            bebenHshdvdvdvdvbehwhehehgegegh
+         </pre>
+      </div>
+      <div class="mypic">
+      </div>
+   </div>
+   <div class="box2" id="Product">
+      <div class="PrdctList">
+         <div class="list"></div>
+         <div class="list"></div>
+         <div class="list"></div>
+         <div class="list"></div>
+         <div class="list"></div>
+         <div class="list"></div>
+      </div>
+   </div>
+   <div class="box3" id="contact">
+      <div class="contact">
+         
+      </div>
+   </div>
+   <script>
+      function a(){
+         document.getElementById("about").scrollIntoView({behavior: "smooth"});
+      }
+      function b(){
+         document.getElementById("Product").scrollIntoView({behavior: "smooth"});
+      }
+      function c(){
+         document.getElementById("contact").scrollIntoView({behavior: "smooth"});
+      }
+   </script>
+   <style>
+      *{
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      .box3 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         width: 100%;
+         background: linear-gradient(to top,skyblue,beige);
+      }
+      .contact{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         box-shadow: 0px 0px 10px;
+         height: 500px;
+         width: 500px;
+      }
+      .mypic{
+         animation: james ease-in-out 1s;
+         animation-fill-mode: both;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 200px;
+         width: 200px;
+         box-shadow: 0px 0px 10px;
+         position: absolute;
+         right: 13%;
+         top: 10%;
+         border-radius: 50%;
+         background: url(/received_1574576327142991.jpeg);
+         background-size: cover;
+         background-position: center;
+      }
+      .myName h1 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-weight: bold;
+         font-size: 60px;
+         color: Brown;
+      }
+      @keyframes james {
+         from {
+            opacity: 0;
+            transform: translateY(80px);
+         }
+         to {
+            opacity: 1;
+            transform: translateY(0px);
+         }
+      }
+      .myName {
+         animation: james ease-in-out 1s;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100px;
+         width: 200px;
+         position: absolute;
+         left: 10.5%;
+         top: 9.5%;
+      }
+      .myName2 {
+         animation: james ease-in-out 1s;
+         animation-delay: 0.3s;
+         animation-fill-mode: both;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 200px;
+         width: 400px;
+         position: absolute;
+         left: 4%;
+         top: 9.5%;
+      }
+      .myName2 h1 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-weight: bold;
+         font-size: 50px;
+         color: Brown;
+      }
+      @keyframes james1 {
+         from {
+            opacity: 0;
+         }
+         to {
+            opacity: 1;
+         }
+      }
+      .myName3 {
+         animation: james1 ease-in-out 1s;
+         animation-delay: 1.2s;
+         animation-fill-mode: both;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100px;
+         width: 200px;
+         position: absolute;
+         left: 12%;
+         top: 15.5%;
+      }
+      .myName3 pre{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-weight: bold;
+         color: Brown;
+      }
+      
+      .box2 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100%;
+         width: 100%;
+         background: linear-gradient(to top,beige, skyblue);
+      }
+      .PrdctList{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         height: 600px;
+         width: 600px;
+         gap: 30px;
+         box-shadow: 0px 0px 10px;
+      }
+      .list {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         height: 150px;
+         width: 150px;
+         gap: 30px;
+         box-shadow: 0px 0px 10px;
+      }
+      body {
+         height: 100vh;
+         width: 100%;
+         padding: 0;
+         margin: 0;
+      }
+      .box{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100%;
+         width: 100%;
+         background: linear-gradient(to top,skyblue,beige);
+      }
+      .box1 {
+         height: 45px;
+         backdrop-filter: blur(15px);
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: fixed;
+         top: 0%;
+         z-index: 1000;
+      }
+      ul {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 30px;
+         list-style: none;
+      }
+      li a {
+         font-weight: bold;
+         font-size: 14px;
+         position: relative;
+         color: brown;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         left: 200%;
+      }
+      li a:hover {
+         cursor: pointer;
+         scale: 1.1;
+         transition: ease-in-out 0.3s;
+         color: purple;
+         text-decoration: underline;
+      }
+      .logo {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 32px;
+         width: 32px;
+         border: solid 2px black;
+         border-radius: 50%;
+         position: relative;
+         right: 25%;
+      }
+      .logo h1 {
+         font-size: 17px;
+         font-weight: bold;
+      }
+   </style>
+</body>
+</html>
