@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Government | Marine Recruitment</title>
+
+<style>
+:root {
+  --navy: #0a1a2f;
+  --gold: #cfa94a;
+  --white: #f5f7fa;
+  --gray: #9aa4b2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(10, 26, 47, 0.95);
+  padding: 16px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav h1 {
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 140px 8% 80px;
+  background: linear-gradient(
+    rgba(10, 26, 47, 0.85),
+    rgba(10, 26, 47, 0.95)
+  ),
+  url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b") center/cover;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  max-width: 700px;
+  margin-bottom: 16px;
+}
+
+.hero h2 span {
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 600px;
+  color: var(--gray);
+  margin-bottom: 32px;
+}
+
+.hero button {
+  padding: 14px 36px;
+  background: var(--gold);
+  border: none;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(207, 169, 74, 0.3);
+}
+
+section {
+  padding: 80px 8%;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--gold);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: rgba(255,255,255,0.04);
+  padding: 28px;
+  border-left: 3px solid var(--gold);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+
+.quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--white);
+}
+
+.quote span {
+  display: block;
+  margin-top: 12px;
+  color: var(--gold);
+}
+
+
+form {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  gap: 16px;
+}
+
+input, select {
+  padding: 14px;
+  background: #0e223d;
+  border: 1px solid #1e3557;
+  color: var(--white);
+}
+
+input::placeholder {
+  color: var(--gray);
+}
+
+form button {
+  padding: 14px;
+  background: var(--gold);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--gray);
+  background: #071425;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>WORLD GOVERNMENT</h1>
+  <div>
+    <a href="#benefits">Benefits</a>
+    <a href="#ranks">Ranks</a>
+    <a href="#enlist">Enlist</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h2>Serve Justice.<br><span>Enlist in the Marines.</span></h2>
+  <p>
+    The World Government calls upon the brave. Stand against piracy,
+    chaos, and rebellion. Rise through the ranks and uphold Absolute Justice.
+  </p>
+  <button onclick="scrollToEnlist()">ENLIST NOW</button>
+</section>
+
+<section id="benefits">
+  <h2 class="section-title">Why Join the Marines</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Global Authority</h3>
+      <p>Operate under the World Government with full international command.</p>
+    </div>
+    <div class="card">
+      <h3>Elite Training</h3>
+      <p>Combat, strategy, discipline, and advanced battlefield tactics.</p>
+    </div>
+    <div class="card">
+      <h3>Rank Advancement</h3>
+      <p>Rise from Recruit to Admiral through merit and strength.</p>
+    </div>
+  </div>
+</section>
+
+<section id="ranks">
+  <h2 class="section-title">Marine Roles</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Infantry</h3>
+      <p>Frontline soldiers enforcing justice worldwide.</p>
+    </div>
+    <div class="card">
+      <h3>Intelligence</h3>
+      <p>Surveillance, strategy, and intelligence operations.</p>
+    </div>
+    <div class="card">
+      <h3>Special Units</h3>
+      <p>Admiral-authorized elite forces.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="quote">
+    “Justice will prevail.”
+    <span>— The Three Admirals</span>
+  </p>
+</section>
+
+<section id="enlist">
+  <h2 class="section-title">Enlistment Form</h2>
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="number" placeholder="Age" required>
+    <select required>
+      <option value="">Preferred Role</option>
+      <option>Infantry</option>
+      <option>Intelligence</option>
+      <option>Special Units</option>
+    </select>
+    <button type="submit">SUBMIT APPLICATION</button>
+  </form>
+</section>
+
+<footer>
+  © World Government Marines • Absolute Justice
+</footer>
+
+<script>
+function scrollToEnlist() {
+  document.getElementById("enlist").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
