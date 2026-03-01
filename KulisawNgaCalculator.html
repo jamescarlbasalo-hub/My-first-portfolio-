@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Calculator</title>
+<style>
+    body {
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .calculator {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        width: 320px;
+    }
+    #display {
+        background: darkgray;
+        color: #0ff;
+        font-size: 1.5em;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: right;
+        margin-bottom: 15px;
+        height: 50px;
+        overflow-x: auto;
+    }
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    button {
+        padding: 15px;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 8px;
+        background: #f2f2f2;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    button:hover {
+        background: #ddd;
+    }
+    .op-row {
+        grid-column: span 4;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    .compare-row {
+        grid-column: span 4;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .equal {
+        background: #2a5298;
+        color: white;
+    }
+    .equal:hover {
+        background: #1e3c72;
+    }
+    .clear {
+        background: #ff4d4d;
+        color: white;
+    }
+    .clear:hover {
+        background: #cc0000;
+    }
+</style>
+</head>
+<body>
+<div class="calculator">
+    <div id="display"></div>
+    <div class="buttons">
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button class="clear" onclick="clearDisplay()">C</button>
+
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button onclick="appendNumber('0')">0</button>
+
+        <div class="op-row">
+            <button onclick="setOperation('+')">+</button>
+            <button onclick="setOperation('-')">-</button>
+            <button onclick="setOperation('*')">×</button>
+            <button onclick="setOperation('/')">÷</button>
+        </div>
+
+        <div class="compare-row">
+            <button onclick="setOperation('<')">&lt;</button>
+            <button onclick="setOperation('>')">&gt;</button>
+        </div>
+    </div>
+</div>
+
+<script>
+let display = document.getElementById("display");
+let currentNumber = "";
+let previousNumber = "";
+let operation = "";
+
+function appendNumber(num) {
+    currentNumber += num;
+    display.textContent += num;
+}
+
+function setOperation(op) {
+    if (currentNumber === "" && previousNumber === "") return;
+    if (previousNumber === "") {
+        previousNumber = currentNumber;
+    }
+    operation = op;
+    display.textContent += " " + op + " ";
+    currentNumber = "";
+}
+
+function clearDisplay() {
+    currentNumber = "";
+    previousNumber = "";
+    operation = "";
+    display.textContent = "";
+}
+
+function calculate() {
+    let num1 = parseFloat(previousNumber);
+    let num2 = parseFloat(currentNumber);
+    let resultText = "";
+
+    if (isNaN(num1) || isNaN(num2)) {
+        display.textContent = "Ang pangutana, gihigugma baka? HAHAHA";
+        return;
+    }
+
+    switch(operation) {
+        case "+":
+            resultText = "I love you";
+            break;
+        case "-":
+            resultText = "Cute kayka";
+            break;
+        case "*":
+            resultText = "I miss you";
+            break;
+        case "/":
+            resultText = "Ako pa?";
+            break;
+        case "<":
+            resultText = "Aka nalang diai";
+            break;
+        case ">":
+            resultText = "Balik na";
+            break;
+        default:
+            resultText = "Ang pangutana, gihigugma baka?";
+    }
+
+    display.textContent = resultText;
+    currentNumber = "";
+    previousNumber = "";
+    operation = "";
+}
+</script>
+</body>
+</html>
