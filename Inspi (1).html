@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspired by nothing HAHA</title>
+    <style>
+        * 
+
+        body {
+            background: #1e1e2f;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+        }
+
+        .card {
+            background: #1a1c28;
+            border-radius: 3.5rem;
+            padding: 20px;
+            box-shadow: 0 40px 60px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(0, 255, 255, 0.2) inset;
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 45px 70px -10px #00d0ff80, 0 0 0 1.5px #0ff inset;
+        }
+        svg {
+            display: block;
+            width: min(90vw, 800px);
+            height: auto;
+            border-radius: 2.8rem;
+            background: radial-gradient(circle at 30% 40%, #252b3a, #0e111b);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+            cursor: grab;
+            transition: filter 0.3s ease;
+        }
+
+        svg:active {
+            cursor: grabbing;
+        }
+        .gear-tooth {
+            transition: filter 0.2s;
+        }
+
+        #RotatingGroup1, #RotatingGroup2, #RotatingGroup3 {
+            filter: drop-shadow(0 0 4px cyan);
+        }
+
+        .bolt {
+            transition: r 0.2s;
+        }
+        .bolt:hover {
+            r: 8;
+            filter: drop-shadow(0 0 8px gold);
+        }
+
+        .center-glow {
+            animation: pulse 2.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { r: 12; opacity: 0.7; }
+            100% { r: 18; opacity: 1; }
+        }
+        .badge {
+            font-size: 10px;
+            font-weight: 600;
+            fill: url(#silverGrad);
+            stroke: #0ff3;
+            stroke-width: 0.3;
+            paint-order: stroke fill;
+            letter-spacing: 2.5px;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#aaccff" />
+                <stop offset="40%" stop-color="#eef5ff" />
+                <stop offset="70%" stop-color="#89b9ff" />
+                <stop offset="100%" stop-color="#3b5f9e" />
+            </linearGradient>
+
+            <linearGradient id="darkMetal" x1="20%" y1="20%" x2="80%" y2="80%">
+                <stop offset="0%" stop-color="#6f7fa3" />
+                <stop offset="50%" stop-color="#c0d2f0" />
+                <stop offset="100%" stop-color="#2f3b5c" />
+            </linearGradient>
+
+            <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffe484" />
+                <stop offset="80%" stop-color="#ffaa33" stop-opacity="0.6" />
+                <stop offset="100%" stop-color="#ff8800" stop-opacity="0" />
+            </radialGradient>
+
+            <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#ccc" />
+                <stop offset="50%" stop-color="#fff" />
+                <stop offset="100%" stop-color="#aaa" />
+            </linearGradient>
+
+            <g id="gear-profile" transform="scale(1)">
+                <circle cx="0" cy="0" r="36" fill="url(#metalGradient)" stroke="#0ff4" stroke-width="2" />
+
+                <g id="teeth">
+                    <rect x="-7" y="-50" width="14" height="22" rx="4" fill="url(#darkMetal)" stroke="#b0e0ff" stroke-width="1.2" transform="rotate(0)" />
+                    <rect x="-7" y="-50" width="14" height="22" rx="4" fill="url(#darkMetal)" stroke="#b0e0ff" stroke-width="1.2" transform="rotate(45)" />
+                    <rect x="-7" y="-50" width="14" height="22" rx="4" fill="url(#darkMetal)" stroke="#b0e0ff" stroke-width="1.2" transform="rotate(90)" />
+                    <rect x="-7" y="-50" width="14" height="22" rx="4" fill="url(#darkMetal)" stroke="#b0e0ff" stroke-width="1.2" transform="rotate(135)" />
+                    <rect x="-7" y="-50" width="14" height="22" rx="4" fill="url(#darkMetal)" stroke="#b0e0ff" stroke-width="1.2" transform="rotate(180)" />
+                    <rect x="-7" y="-50" width="14" height="22" rx="4" fill="url(#darkMetal)" stroke="#b0e0ff" stroke-width="1.2" transform="rotate(225)" />
+                    <rect x="-7" y="-50" width="14" height="22" rx="4" fill="url(#darkMetal)" stroke="#b0e0ff" stroke-width="1.2" transform="rotate(270)" />
+                    <rect x="-7" y="-50" width="14" height="22" rx="4" fill="url(#darkMetal)" stroke="#b0e0ff" stroke-width="1.2" transform="rotate(315)" />
+                </g>
+                <!-- central bolt -->
+                <circle cx="0" cy="0" r="12" fill="url(#centerGlow)" stroke="#ffe9aa" stroke-width="2.5" class="bolt" />
+                <circle cx="0" cy="0" r="5" fill="#fffbe3" stroke="#aac9ff" stroke-width="1.5" />
+            </g>
+        </defs>
+
+        <path d="M80 200 L520 200 M300 60 L300 340 M140 120 L460 280 M160 280 L440 130" stroke="#3f5277" stroke-width="1.2" stroke-dasharray="8 6" opacity="0.4" />
+
+        <g id="RotatingGroup1" transform="translate(190,200)">
+            <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="14s" repeatCount="indefinite" additive="sum" />
+            <use href="#gear-profile" transform="scale(1.3)" />
+
+            <circle cx="0" cy="0" r="24" fill="none" stroke="#9cdbff" stroke-width="1.8" stroke-dasharray="4 6" />
+        </g>
+
+        <g id="RotatingGroup2" transform="translate(380,200)">
+            <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="12s" repeatCount="indefinite" additive="sum" />
+            <use href="#gear-profile" transform="scale(1.25)" />
+            <circle cx="0" cy="0" r="24" fill="none" stroke="#ffd48a" stroke-width="1.8" stroke-dasharray="4 6" />
+        </g>
+
+        <g id="RotatingGroup3" transform="translate(290,200)">
+            <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="8s" repeatCount="indefinite" additive="sum" />
+            <circle cx="0" cy="0" r="27" fill="url(#metalGradient)" stroke="#f0f" stroke-width="2.2" />
+
+            <rect x="-5" y="-40" width="10" height="18" rx="3" fill="url(#darkMetal)" stroke="#ffb3ff" transform="rotate(0)" />
+            <rect x="-5" y="-40" width="10" height="18" rx="3" fill="url(#darkMetal)" stroke="#ffb3ff" transform="rotate(36)" />
+            <rect x="-5" y="-40" width="10" height="18" rx="3" fill="url(#darkMetal)" stroke="#ffb3ff" transform="rotate(72)" />
+            <rect x="-5" y="-40" width="10" height="18" rx="3" fill="url(#darkMetal)" stroke="#ffb3ff" transform="rotate(108)" />
+            <rect x="-5" y="-40" width="10" height="18" rx="3" fill="url(#darkMetal)" stroke="#ffb3ff" transform="rotate(144)" />
+            <rect x="-5" y="-40" width="10" height="18" rx="3" fill="url(#darkMetal)" stroke="#ffb3ff" transform="rotate(180)" />
+            <rect x="-5" y="-40" width="10" height="18" rx="3" fill="url(#darkMetal)" stroke="#ffb3ff" transform="rotate(216)" />
+            <rect x="-5" y="-40" width="10" height="18" rx="3" fill="url(#darkMetal)" stroke="#ffb3ff" transform="rotate(252)" />
+            <rect x="-5" y="-40" width="10" height="18" rx="3" fill="url(#darkMetal)" stroke="#ffb3ff" transform="rotate(288)" />
+            <rect x="-5" y="-40" width="10" height="18" rx="3" fill="url(#darkMetal)" stroke="#ffb3ff" transform="rotate(324)" />
+            <circle cx="0" cy="0" r="10" fill="url(#centerGlow)" stroke="#ffecaa" stroke-width="2" />
+        </g>
+
+        <circle cx="190" cy="200" r="4" fill="#0ff" filter="url(#glow)" />
+        <circle cx="380" cy="200" r="4" fill="#ffb347" filter="url(#glow)" />
+        <circle cx="290" cy="200" r="5" fill="#fff" stroke="#0ff" stroke-width="2" />
+        
+        <defs>
+            <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+                <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+        </defs>
+
+        <line x1="190" y1="200" x2="290" y2="200" stroke="#00e0ff" stroke-width="2.2" stroke-dasharray="6 6" opacity="0.5">
+            <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite" />
+        </line>
+        <line x1="290" y1="200" x2="380" y2="200" stroke="#ffaa33" stroke-width="2.2" stroke-dasharray="6 6" opacity="0.5">
+            <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1s" repeatCount="indefinite" />
+        </line>
+
+        <circle cx="240" cy="160" r="6" fill="gold" filter="url(#glow)" opacity="0.7">
+            <animate attributeName="r" values="5;8;5" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="340" cy="240" r="6" fill="cyan" filter="url(#glow)" opacity="0.7">
+            <animate attributeName="r" values="6;9;6" dur="2.4s" repeatCount="indefinite" />
+        </circle>
+
+        <text x="460" y="360" class="badge" text-anchor="end">JAMES CARL</text>
+        <text x="470" y="380" fill="#0ff3" font-size="7" font-family='monospace' text-anchor="end">interlocking gear train • 3 rotor harmonics</text>
+
+        <g transform="translate(120, 100)">
+            <animateTransform attributeName="transform" type="rotate" from="0 120 100" to="360 120 100" dur="10s" repeatCount="indefinite" />
+            <polygon points="0,-10 3,-3 10,0 3,3 0,10 -3,3 -10,0 -3,-3" fill="#f0f5ff" filter="url(#glow)" opacity="0.6" />
+        </g>
+    </svg>
+</div>
+</body>
+</html>
