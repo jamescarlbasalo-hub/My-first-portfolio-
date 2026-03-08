@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JC Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "a";
+    letter-spacing: 2px;
+}
+@font-face {
+    font-family:"a";
+    src: url(Fonts/Nexa-Heavy.ttf);
+}
+body{
+    background:#e0e5ec;
+    display:flex;
+    height:100vh;
+    width: 100%;
+}
+@keyframes a {
+    from{
+        transform: translateX(-250px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+.sidebar{
+    animation: a ease-in-out 1.5s;
+    width:230px;
+    background:#e0e5ec;
+    box-shadow:-10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+    padding:30px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+@keyframes logo {
+    0%{
+        transform: translateY(20px);
+    }
+    25%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-20px);
+    } 
+}
+.logo{
+    animation: logo infinite alternate ease-in-out 4s;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    border:2px solid black;
+    border-radius:50%;
+    width: 100px;
+    height:100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    background-image:  url(dark.queen.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.sidebar a{
+    text-decoration:none;
+    color:black;
+    padding:12px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+    box-shadow:-6px -6px 12px #ffffff, 6px 6px 12px #b8bcc2;
+}
+
+.sidebar a:hover{
+    box-shadow:inset -4px -4px 6px #ffffff, inset 4px 4px 6px #b8bcc2;
+}
+
+.main{
+    flex:1;
+    padding:40px;
+}
+@keyframes b{
+    from{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.topbar{
+    animation: b ease-in-out 1.5s;
+    height:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    border-radius:20px;
+    box-shadow:-10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+    margin-bottom:40px;
+}
+
+.topbar h1{
+    font-size:22px;
+}
+
+.logout{
+    padding:8px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    color:black;
+    box-shadow:-6px -6px 12px #ffffff, 6px 6px 12px #b8bcc2;
+}
+
+.logout:hover{
+    box-shadow:inset -4px -4px 6px #ffffff, inset 4px 4px 6px #b8bcc2;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+
+.card1{
+    animation: b ease-in-out 1.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+    position: relative;
+    width: 350px;
+    height: 450px;
+    top: 30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:-10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+}
+.card1 input{
+    box-shadow: inset 4px 4px 4px #b8bcc2, inset -4px -4px 4px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    height: 35px;
+    background: #e0e5ec;
+    border-radius: 10px;
+    outline: none;
+    position: relative;
+    top: 10px;
+    left: 93px;
+}
+.card1 input::placeholder{
+    color: #b8bcc2;
+    font-weight: bold;
+    padding: 10px;
+}
+.card1 button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    top: 23px;
+    width: 120px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background: #e0e5ec;
+    box-shadow:-4px -4px 8px #ffffff, 4px 4px 8px #b8bcc2;
+    position: relative;
+    right: -34%;
+}
+.card1 button a {
+    text-decoration: none;
+    color: black;
+}
+.card2{
+    animation: b ease-in-out 1.5s;
+    animation-delay: 0.4s;
+     animation-fill-mode: both;
+    position: relative;
+     width: 700px;
+     top: 30px;
+     height: 450px;
+     border-radius:20px;
+    text-align:center;
+    box-shadow:-10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+}
+.spn{
+    color: blue;
+    position: relative;
+    top: -30%;
+    right: -42%;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.card2 h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-radius: 20px;
+    width: 500px;
+    box-shadow:inset -3px -3px 6px #ffffff, inset 3px 3px 6px #b8bcc2;
+    position: relative;
+    top: 50px;
+    left: 14%;
+}
+.card2 h3{
+    box-shadow:-10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: none; 
+    position: relative;
+    right: -45%;
+    top: 23%;
+}
+.card2 h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    height: 260px;
+    font-size: 15px;
+    border-radius: 20px;
+    width: 500px;
+    box-shadow:inset -3px -3px 6px #ffffff, inset 3px 3px 6px #b8bcc2;
+    position: relative;
+    top: 50px;
+    left: 14%;
+}
+.card1 img{
+    position: relative;
+    width: 140px;
+    height: 270px;
+    top: -5px;
+}
+
+.card1 h2{
+    font-size:18px;
+    padding: 20px;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:bold;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th, td{
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    font-weight:bold;
+}
+
+tr{
+    box-shadow:-3px -3px 6px #ffffff, 3px 3px 6px #b8bcc2;
+    border-radius:10px;
+}
+
+button{
+    padding:6px 12px;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    background:#e0e5ec;
+    box-shadow:-4px -4px 8px #ffffff, 4px 4px 8px #b8bcc2;
+}
+
+button:hover{
+    box-shadow:inset -3px -3px 6px #ffffff, inset 3px 3px 6px #b8bcc2;
+    cursor:pointer;
+}
+
+@media (max-width: 768px){
+
+    body{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .logo{
+        width: 60px;
+        height: 60px;
+        font-size: 14px;
+    }
+
+    .main{
+        padding: 15px;
+    }
+
+    .topbar{
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1,
+    .card2{
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: 0 auto 20px auto;
+    }
+
+    .card2 h1,
+    .card2 h2,
+    .card2 h3{
+        position: static;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+        margin: 15px 0;
+    }
+
+    .card1 img{
+        width: 100%;
+        height: auto;
+    }
+
+    .card1 input,
+    .card1 button{
+        position: static;
+        width: 100%;
+        margin: 15px 0;
+    }
+}
+</style>
+</head>
+<body>
+
+
+<div class="sidebar">
+    <div class="logo"></div>
+    <a href="#">Dashboard</a>
+    <a href="#">Orders</a>
+    <a href="#">Support</a>
+    <a href="#">Settings</a>
+</div>
+
+
+<div class="main">
+    <div class="topbar">
+        <h1>User Dashboard</h1>
+        <a href="final.html" class="logout">Go Back</a>
+    </div>
+
+    <div class="cards">
+        <div class="card1">
+            <h2>Samsung Galaxy s24 ultra</h2>
+            <img src="ac725c707fda92d71e84bc360fdd4ee0_2_-removebg-preview.png" alt="">
+            <input type="number" placeholder="Amount">
+            <button><a href="log-in.html">Buy</a></button>
+        </div>
+        <div class="card2">
+            <h1>$1100</h1>
+            <h3>Details</h3>
+            <h2><br>Chipset - Snapdragon 8 gen3<br>
+RAM - 12GB/16GB <br> ROM - 256GB/512GB/1TB <br> Display - 6.8 inch LTPO AMOLED <br> Battery - 5000mAh <br> Rear camera - 200MP + 50MP + 12MP + 12MP <br> Front camera - 12MP</h2>
+            </h2>
+    </div>
+</div>
+</body>
+</html>

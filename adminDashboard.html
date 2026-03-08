@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JC Admin Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:arial, sans-serif;
+}
+*{
+    font-family: 'a';
+}
+@font-face {
+    font-family: 'a'; 
+    src: url(Fonts/Nexa-Heavy.ttf);
+}
+
+body{
+    background:#e0e5ec;
+    display:flex;
+    min-height:100vh;
+}
+@keyframes a {
+    from{
+        transform: translateX(-250px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+.sidebar{
+    animation: a ease-in-out 1.5s;
+    width:230px;
+    background:#e0e5ec;
+    box-shadow:-10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+    padding:30px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.logo{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    border:2px solid black;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    background-image:  url(wallhaven-od9zwm.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.sidebar a{
+    text-decoration:none;
+    color:black;
+    padding:12px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+    box-shadow:-6px -6px 12px #ffffff, 6px 6px 12px #b8bcc2;
+}
+
+.sidebar a:hover{
+    box-shadow:inset -4px -4px 6px #ffffff, inset 4px 4px 6px #b8bcc2;
+}
+
+
+.main{
+    flex:1;
+    padding:40px;
+}
+@keyframes b{
+    from{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.topbar{
+    animation: b ease-in-out 1.5s;
+    height:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    border-radius:20px;
+    box-shadow:-10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+    margin-bottom:40px;
+}
+
+.topbar h1{
+    font-size:22px;
+}
+
+.logout{
+    padding:8px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    color:black;
+    box-shadow:-6px -6px 12px #ffffff, 6px 6px 12px #b8bcc2;
+}
+
+.logout:hover{
+    box-shadow:inset -4px -4px 6px #ffffff, inset 4px 4px 6px #b8bcc2;
+}
+
+
+.cards{
+    animation: b ease-in-out 1.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:30px;
+}
+
+.card{
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:-10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+}
+
+.card h2{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:bold;
+}
+
+
+.table-section{
+    animation: b ease-in-out 1.5s;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+    margin-top:50px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:-10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+}
+
+table{
+    width:100%;
+    border-collapse:separate;
+    margin-top:20px;
+    border-spacing: 0px 15px;
+}
+
+th, td{
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    font-weight:bold;
+}
+
+tr{
+    box-shadow:-3px -3px 6px #ffffff, 3px 3px 6px #b8bcc2;
+    border-radius:10px;
+}
+
+button{
+    padding:6px 12px;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    background:#e0e5ec;
+    box-shadow:-4px -4px 8px #ffffff, 4px 4px 8px #b8bcc2;
+}
+
+button:hover{
+    box-shadow:inset -3px -3px 6px #ffffff, inset 3px 3px 6px #b8bcc2;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    body{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        flex-direction:row;
+        justify-content:space-around;
+        align-items:center;
+    }
+
+    .main{
+        padding:20px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        gap:10px;
+        height:auto;
+        padding:15px;
+    }
+}
+
+@media(max-width:768px){
+
+    body{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        flex-direction:row;
+        justify-content:space-around;
+        align-items:center;
+        padding:15px;
+    }
+
+    .sidebar .logo{
+        width:40px;
+        height:40px;
+        font-size:16px;
+    }
+
+    .sidebar a{
+        padding:8px 10px;
+        font-size:12px;
+    }
+
+    .main{
+        padding:20px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+
+    .cards{
+        
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+
+<div class="sidebar">
+    <div class="logo">JC</div>
+    <a href="#">Dashboard</a>
+    <a href="#">Orders</a>
+    <a href="#">Support</a>
+    <a href="#">Settings</a>
+</div>
+
+
+<div class="main">
+
+    <div class="topbar">
+        <h1>Admin Dashboard</h1>
+        <a href="log-in.html" class="logout">Log Out</a>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h2>Total Products</h2>
+            <p>12</p>
+        </div>
+
+        <div class="card">
+            <h2>Orders</h2>
+            <p>54</p>
+        </div>
+
+        <div class="card">
+            <h2>Total Stock</h2>
+            <p>21</p>
+        </div>
+
+        <div class="card">
+            <h2>Tanan Mabayran nimo</h2>
+            <p>$12,430</p>
+        </div>
+    </div>
+
+    <div class="table-section">
+        <h2>Manage Products</h2>
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>Samsung Galaxy S26 Ultra</td>
+                <td>$1299</td>
+                <td>15</td>
+                <td><button>Edit</button> <button>Delete</button></td>
+            </tr>
+
+            <tr>
+                <td>Samsung Galaxy S25 Ultra</td>
+                <td>$1199</td>
+                <td>20</td>
+                <td><button>Edit</button> <button>Delete</button></td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
