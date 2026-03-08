@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1" id="scroll1">
+        <nav>
+            <a class="haha" href="log-in.html">log in</a>
+            <div class="logo">
+                <img src="samsung-logo-samsung-icon-free-free-vector-removebg-preview.png" alt="">
+            </div>
+            <ul>
+                <li><a onclick="about()">Home</a></li>
+                <li><a onclick="contact()">Products</a></li>
+                <li><a onclick="skill()">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="me">
+            <h1>WELCOME TO OUR STORE</h1>
+        </div>
+        <div class="description">
+            <p>"Power in your hands. Innovation in your pocket."</p>
+        </div>
+    </div>
+    <div class="box2" id="scroll2">
+        <div class="listmain">
+            <div class="list1">
+                <img src="53080f745bef68310770f39bc10cf27c_1_-removebg-preview.png" alt="">
+                  <pre>SAMSUNG GALAXY S26 ULTRA</pre>
+                <div class="btnbox">
+                    <button><a href="s26Ultra.html">BUY</a></button>
+                </div>
+            </div>
+            <div class="list2">
+                <img src="7290859902f576f41852354d6a3a9d43_1_-removebg-preview.png" alt="">
+                  <pre>SAMSUNG GALAXY S25 ULTRA</pre>
+                <div class="btnbox2">
+                    <button><a href="s25ultra.html">BUY</a></button>
+                </div>
+            </div>
+            <div class="list3">
+                <img src="ac725c707fda92d71e84bc360fdd4ee0_2_-removebg-preview.png" alt="">
+                  <pre>SAMSUNG GALAXY S24 ULTRA</pre>
+                  <div class="btnbox3">
+                     <button><a href="24ultra.html">BUY</a></button>
+                  </div>
+            </div>
+            <div class="list4">
+                <img src="00f3eb7af83dd9c4df5e20a39d411596_1_-removebg-preview (1).png" alt="">
+                    <pre>SAMSUNG GALAXY S23 ULTRA</pre>
+                <div class="btnbox4">
+                    <button><a href="s23ultra.html">BUY</a></button>
+                </div>
+            </div>
+            <div class="list5">
+                  <img src="aaffa3f6b3eccfd7d80f9f4b8823b5b4_1_-removebg-preview.png" alt="">
+                  <pre>SAMSUNG GALAXY S22 ULTRA</pre>
+                <div class="btnbox5">
+                     <button><a href="s22ultra.html">BUY</a></button>
+                </div>
+            </div>
+            <div class="list6">
+                  <pre>SAMSUNG GALAXY S21 ULTRA</pre>
+                  <img src="6957304d8f6e5df3f5923946596b3514_1_-removebg-preview.png" alt="">
+                <div class="btnbox6">
+                    <button><a href="s21ultra.html">BUY</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list-cont">
+            <div class="listmain">
+                <div class="list7">
+                    <img src="" alt="">
+                    <pre>SAMSUNG GALAXY S21 ULTRA</pre>
+                <div class="btnbox6">
+                    <button><a href="log-in.html">BUY</a></button>
+                </div>
+                </div>
+                <div class="list8">
+                    <img src="" alt="">
+                    <pre>SAMSUNG GALAXY S21 ULTRA</pre>
+                    <div class="btnbox6">
+                       <button><a href="log-in.html">BUY</a></button>
+                    </div>
+                </div>
+                <div class="list9">
+                    <img src="" alt="">
+                    <pre>SAMSUNG GALAXY S21 ULTRA</pre>
+                    <div class="btnbox6">
+                        <button><a href="log-in.html">BUY</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box3"  id="scroll3">
+        <div class="contact-logo"></div>
+        <h1 class="contacth1">Contact Us</h1>
+        <div class="form">
+            <form action="">
+                <input type="text" name="" id="" placeholder="Name">
+                <input type="text" name="" id="" placeholder="Email">
+                <div class="inputdiv">
+                    <input type="text" name="" id="" placeholder="message*">
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function about(){
+            document.getElementById("scroll1").scrollIntoView({behavior: "smooth"});
+        }
+         function contact(){
+            document.getElementById("scroll2").scrollIntoView({behavior: "smooth"});
+        }
+        function skill(){
+            document.getElementById("scroll3").scrollIntoView({behavior: "smooth"});
+        }
+    </script>
+    <style>
+        *{
+            font-family:"b";
+        }
+        @font-face {
+            src: url(Fonts/Nexa-Heavy.ttf);
+            font-family: "b";
+        }
+        .contact-logo{
+            background-image: url(call-pad-icon-400x225.png);
+            height: 300px;
+            width: 300px;
+            position: relative;
+            top: 30px;
+            background-size: cover;
+            background-position: center;
+        }
+        .form {
+            animation: idk 5s linear;
+            animation-range: entry 0% cover 40%;
+            animation-timeline: view();
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            box-shadow: 0px 0px 10px;
+            width: 500px;
+            position: relative;
+            left: 70px;
+            top: 30px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            border-radius: 20px;
+        }
+        .form button { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            width: 100px;
+            border-radius: 10px;
+            border: none;
+            margin-top: 20px;
+            box-shadow: -3px -3px 7px #ffffff, 3px 3px 7px #b8bcc2;
+            background: #e0e5ec;
+            font-weight: bold;
+            color: #b8bcc2;
+        }
+        .form input {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            height: 40px;
+            width: 350px;
+            border-radius: 5px;
+            border: none;
+            background: #e0e5ec;
+            box-shadow: inset 5px 5px 7px #b8bcc2, inset -5px -5px 7px #ffffff;
+            margin-top: 20px;
+            outline: none;
+        }
+        .inputdiv input {
+            height: 140px;
+            width: 350px;
+            color: white;
+        }
+        .form input::placeholder {
+            color: #b8bcc2;
+        }
+        @keyframes idk1 {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        .box3{
+            background: #e0e5ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .contacth1{
+            color: aqua;
+            font-weight: bold;
+            height: 100px;
+            font-size: 50px;
+            width: 400px;
+            letter-spacing: 3px;
+            text-align: center;
+            position: relative;
+            bottom: 240px;
+            left: 100px;
+            opacity: 0.3;
+            color: black;
+        }
+
+        .list-cont{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background: #e0e5ec;
+        }
+        .me {
+            animation: down3 ease-in-out 1.5s;
+            animation-delay: 0.4s;
+            animation-fill-mode: both;
+            position: relative;
+            left: 250px;
+            bottom: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            width: 800px;
+              box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+              border-radius: 20px;
+              border: none;
+  
+        }
+        .logo {
+            position: absolute;
+            left: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            border-radius: 50%;
+            height: 30px;
+        }
+        .logo  img {
+            height: 130px;
+            width: 120px;
+        }
+        @keyframes down2 {
+            from{
+                opacity: 0;
+                transform: translateY(-120px);
+            }
+            to {
+                 opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+          @keyframes down3 {
+            from{
+                opacity: 0;
+                transform: translateY(90px);
+            }
+            to {
+                 opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        .description{
+            animation: down3 ease-in-out 1.5s;
+            animation-delay: 0.8s;
+            animation-fill-mode: both;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            width: 550px;
+            position: relative;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            border-radius: 20px;
+            border: none;
+            top: 100px;
+            right: 430px;
+        }
+        .description p {
+            animation: idk1 ease-in-out 1.5s;
+            animation-delay: 0.3s;
+            animation-fill-mode: both;
+            letter-spacing: 1px;
+            color: gray;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .me h1{
+             letter-spacing: 3px;
+            animation-fill-mode: both;
+            font-weight: bold;
+            font-size: 50px;
+            text-shadow: 0px 0px 5px;
+            opacity: 1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            color: transparent;
+            justify-content: center;
+            -webkit-text-stroke: 1px white;
+            animation: down3 ease-in-out 1s, borderGlow 3s linear infinite;
+            position: relative;
+            left: 10px;
+        
+        }
+        @keyframes borderGlow {
+        0% {
+            -webkit-text-stroke: 2px purple;
+        }
+        25% {
+            -webkit-text-stroke: 2px gray;
+        }
+        50% {
+            -webkit-text-stroke: 2px skyblue;
+        }
+        75% {
+            -webkit-text-stroke: 2px gray;
+        }
+        100% {
+            -webkit-text-stroke: 2px purple;
+        
+        }
+    }
+        .pic h1 {
+            color: white;
+            font-weight: bold;
+            text-shadow: 0px 0px 20px white;
+        }
+        @keyframes idk {
+            from {
+                scale: 0.4;
+                opacity: 0;
+            }
+            to {
+                scale: 1;
+                opacity: 1;
+            }
+        }
+        .box2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background: #e0e5ec;
+        }
+        .listmain {
+            animation: idk1 ease-in-out 1.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 700px;
+            gap: 50px;
+            width: 90%;
+            margin-top: 90px;
+        }
+
+        .list1 {
+            animation: idk 5s linear;
+            animation-range: entry 0% cover 40%;
+            animation-timeline: view();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 310px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            row-gap: 30px;
+            border: none;
+            border-radius: 20px;
+        }
+        .list1:hover {
+            cursor: pointer;
+            scale: 1.02;
+            transition: all ease-in-out 0.2s;
+        }
+        .list1 img {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            left: 125px;
+            bottom: 30px;
+        }
+        .btnbox {
+            height: 20px;
+            width: 100px;
+            position: relative;
+            top: 40%;
+            right: 150px;
+        }
+        .btnbox button {
+            height: 35px;
+            width: 100px;
+            border-radius: 7px;
+            border: none;
+            background: none;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+        }
+        .list1 pre {
+            position: relative;
+            right: 30px;
+            top: 85px;
+            color: black;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .btnbox button a:active{
+            cursor: pointer;
+            color: blue;
+        }
+        .btnbox button a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .list2 {
+            animation: idk 5s linear;
+            animation-range: entry 0% cover 40%;
+            animation-timeline: view();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 310px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            row-gap: 30px;
+            border: none;
+            border-radius: 20px;
+        }
+        .list2:hover {
+            cursor: pointer;
+            scale: 1.02;
+            transition: all ease-in-out 0.2s;
+        }
+        .list2 pre {
+            top: 80px;
+            right: 50px;    
+            position: relative;
+            color: black;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .btnbox2 button a:active{
+            cursor: pointer;
+            color: blue;
+        }
+        .btnbox2 button a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+         .btnbox2 {
+            height: 20px;
+            width: 100px;
+            position: relative;
+            top: 40%;
+            right: 175px;
+        }
+        .btnbox2 button {
+            height: 35px;
+            width: 100px;
+            border-radius: 7px;
+            border: none;
+            background: none;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+        }
+        .list2 img {
+            height: 240px;
+            width: 240px;
+            position: relative;
+            left: 125px;
+            bottom: 45px;
+        }
+        .list3 {
+            animation: idk 5s linear;
+            animation-range: entry 0% cover 40%;
+            animation-timeline: view();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 310px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            row-gap: 30px;
+            border: none;
+            border-radius: 20px;
+        }
+        .list3:hover {
+            cursor: pointer;
+            scale: 1.02;
+            transition: all ease-in-out 0.2s;
+        }
+        .btnbox3 {
+            height: 20px;
+            width: 100px;
+            position: relative;
+            top: 40%;
+            right: 120px;
+        }
+        .btnbox3 button {
+            height: 35px;
+            width: 100px;
+            border-radius: 7px;
+            border: none;
+            background: none;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+        }
+        .list3 pre {
+            position: relative;
+            right: -5px;
+            top: 80px;
+            color: black;
+            font-size: 10px;
+            height: 10px;
+            width: 300px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .btnbox3 button a:active{
+            cursor: pointer;
+            color: blue;
+        }
+        .btnbox3 button a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .list3 img {
+            height: 170px;
+            width: 170px;
+            position: relative;
+            left: 125px;
+            bottom: 35px;
+        }
+        .list4 {
+            animation: idk 5s linear;
+            animation-range: entry 0% cover 40%;
+            animation-timeline: view();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 310px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            row-gap: 30px;
+            border: none;
+            border-radius: 20px;
+        }
+        .list4:hover {
+            cursor: pointer;
+            scale: 1.02;
+            transition: all ease-in-out 0.2s;
+        }
+        .btnbox4 {
+            height: 20px;
+            width: 190px;
+            position: relative;
+            top: 40%;
+            left: -150px;
+        }
+        .btnbox4 button {
+            height: 35px;
+            width: 100px;
+            border-radius: 7px;
+            border: none;
+            background: none;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+        }
+        
+        .list4 pre {
+            position: relative;
+            left: -20px;
+            top: 75px;
+            color: black;
+            font-size: 10px;
+            height: 10px;
+            width: 300px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .btnbox4 button a:active{
+            cursor: pointer;
+            color: blue;
+        }
+        .btnbox4 button a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .list4 img {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            right: -110px;
+            bottom: 30px;
+        }
+        .list5 {
+            animation: idk 5s linear;
+            animation-range: entry 0% cover 40%;
+            animation-timeline: view();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 310px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            row-gap: 30px;
+            border: none;
+            border-radius: 20px;
+        }
+        .list5:hover {
+            cursor: pointer;
+            scale: 1.02;
+            transition: all ease-in-out 0.2s;
+        }
+        .btnbox5 {
+            height: 20px;
+            width: 100px;
+            position: relative;
+            top: 40%;
+            right: 150px;
+        }
+        .btnbox5 button {
+            height: 35px;
+            width: 100px;
+            border-radius: 7px;
+            border: none;
+            background: none;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+        }
+        .list5 pre {
+            position: relative;
+            left: -20px;
+            top: 70px;
+            color: black;
+            font-size: 10px;
+            height: 10px;
+            width: 300px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .btnbox5 button a:active{
+            cursor: pointer;
+            color: blue;
+        }
+        .btnbox5 button a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .list5 img {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            right: -105px;
+            bottom: 40px;
+        }
+        .list6 {
+            animation: idk 5s linear;
+            animation-range: entry 0% cover 40%;
+            animation-timeline: view();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 310px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            row-gap: 30px;
+            border: none;
+            border-radius: 20px;
+        }
+        .list6:hover {
+            cursor: pointer;
+            scale: 1.02;
+            transition: all ease-in-out 0.2s;
+        }
+        .btnbox6 {
+            height: 20px;
+            width: 100px;
+            position: relative;
+            top: 40%;
+            right: 140px;
+        }
+        .btnbox6 button {
+            height: 35px;
+            width: 100px;
+            border-radius: 7px;
+            border: none;
+            background: none;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+        }
+        .list6 pre {
+            position: relative;
+            left: 110px;
+            top: 70px;
+            color: black;
+            font-size: 10px;
+            height: 10px;
+            width: 300px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .btnbox6 button a:active{
+            cursor: pointer;
+            color: blue;
+        }
+        .btnbox6 button a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .list6 img {
+            height: 225px;
+            width: 225px;
+            position: relative;
+            right: 35px;
+            bottom: 40px;
+        }
+        .list7 {
+            animation: idk 5s linear;
+            animation-range: entry 0% cover 40%;
+            animation-timeline: view();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 310px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            row-gap: 30px;
+            border: none;
+            border-radius: 20px;
+        }
+        .list7 button {
+            height: 35px;
+            width: 330px;
+            border-radius: 7px;
+            position: relative;
+            top: 40%;
+            right: 90px;
+            border: none;
+            background: none;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+        }
+        .list7 h1 {
+            position: relative;
+            right: 50px;
+            top: 60px;
+            color: black;
+            font-size: 10px;
+            height: 10px;
+            box-shadow: 0px 0px 10px;
+            width: 300px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .list7 button a:active{
+            cursor: pointer;
+            color: blue;
+        }
+        .list7 button a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .list8 {
+            animation: idk 5s linear;
+            animation-range: entry 0% cover 40%;
+            animation-timeline: view();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 310px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            row-gap: 30px;
+            border: none;
+            border-radius: 20px;
+        }
+        .list8 button {
+            height: 35px;
+            width: 330px;
+            border-radius: 7px;
+            position: relative;
+            top: 40%;
+            right: 90px;
+            border: none;
+            background: none;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+        }
+        .list8 h1 {
+            position: relative;
+            right: 50px;
+            top: 60px;
+            color: black;
+            font-size: 10px;
+            height: 10px;
+            box-shadow: 0px 0px 10px;
+            width: 300px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .list8 button a:active{
+            cursor: pointer;
+            color: blue;
+        }
+        .list8 button a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .list9 {
+            animation: idk 5s linear;
+            animation-range: entry 0% cover 40%;
+            animation-timeline: view();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 310px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            row-gap: 30px;
+            border: none;
+            border-radius: 20px;
+        }
+        .list9 button {
+            height: 35px;
+            width: 330px;
+            border-radius: 7px;
+            position: relative;
+            top: 40%;
+            right: 90px;
+            border: none;
+            background: none;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+        }
+        .list9 h1 {
+            position: relative;
+            right: 50px;
+            top: 60px;
+            color: black;
+            font-size: 10px;
+            height: 10px;
+            box-shadow: 0px 0px 10px;
+            width: 300px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .list9 button a:active{
+            cursor: pointer;
+            color: blue;
+        }
+        .list9 button a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        @keyframes side{
+            from{
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                  opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100%;
+        }
+        .box1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+            background: #e0e5ec;
+        }
+
+        @keyframes down {
+            from{
+                transform: translateY(-80px);
+            }
+            to {
+                transform: translateY(0px);
+            }
+        }
+        nav {
+            animation: down ease-in-out 1s, navGlow 4s ease-in-out infinite;    
+            display: flex;
+            background: #e0e5ec;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            width: 100%;
+            z-index: 1000;
+            position: fixed;
+            top: 0%;
+        }
+        @keyframes navGlow {
+        0% {
+            box-shadow: 0 0 15px gray, 0 0 20px silver;
+        }
+        50% {
+            box-shadow: 0 0 20px purple, 0 0 40px purple;
+        }
+        100% {
+            box-shadow: 0 0 15px gray, 0 0 20px silver;
+        }
+}
+        .haha  {
+            width: 100px;
+            height: 30px ;
+            text-align: center;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            text-decoration: none;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            left: 50%;
+            color: black;
+            font-weight: bold;
+            outline: none;
+        }
+        .haha:hover {
+            scale: 1.02;
+            transition: all ease-in-out 0.2s;
+            cursor: pointer;
+        }
+        .logIN a {
+            height: 30px;
+            width: 100px;
+            border-radius: 7px;
+            position: relative;
+            left: 46%;
+            border: solid 1px white;
+            background: none;
+            backdrop-filter: blur(20px);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        ul {
+             display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            position: relative;
+            left: 10%;
+            list-style: none;
+        }
+        li{
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 10px;
+            width: 100px;
+                   box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+        }
+        li:hover {
+            scale: 1.02;
+            transition: all ease-in-out 0.4s;
+            cursor: pointer;
+            box-shadow: inset -2px -2px 3px #ffffff, inset 2px 2px 3px #b8bcc2;
+        }
+        li a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+         }
+         li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+         @media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .box1 {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px; 
+    }
+
+    .me {
+        position: static;
+        width: 90%;
+        height: auto;
+        margin-top: 40px;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
+    }
+
+    nav {
+          height: 50px;
+        padding: 0 15px;
+        justify-content: flex-end;
+    }
+
+    .logo {
+        position: static;
+    }
+
+    .haha {
+                position: static;
+        width: 80px;
+        height: 28px;
+        font-size: 12px;
+        left: 0;
+    }
+
+    ul {
+           display: none;
+    }
+
+    li {
+        width: 80%;
+    }
+    .me {
+        position: static;
+        width: 90%;
+        height: auto;
+        margin-top: 120px;
+        padding: 20px;
+        left: 0;
+        bottom: 0;
+    }
+    .me h1 {
+        font-size: 28px;
+        text-align: center;
+        left: 0;
+    }
+    .description {
+        position: static;
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+        padding: 15px;
+        right: 0;
+        top: 0;
+    }
+
+    .listmain {
+        height: auto;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 120px;
+    }
+
+    .list1,
+    .list2,
+    .list3,
+    .list4,
+    .list5,
+    .list6,
+    .list7,
+    .list8,
+    .list9 {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .list1 img,
+    .list2 img,
+    .list3 img,
+    .list4 img,
+    .list5 img,
+    .list6 img {
+        position: static;
+        width: 70%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .list1 pre,
+    .list2 pre,
+    .list3 pre,
+    .list4 pre,
+    .list5 pre,
+    .list6 pre,
+    .list7 pre,
+    .list8 pre,
+    .list9 pre {
+        position: static;
+        font-size: 14px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .list1 button,
+    .list2 button,
+    .list3 button,
+    .list4 button,
+    .list5 button,
+    .list6 button,
+    .list7 button,
+    .list8 button,
+    .list9 button {
+        position: static;
+        width: 100%;
+    }
+    .box3 {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    .contacth1 {
+        position: static;
+        width: 100%;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .form {
+        position: static;
+        width: 90%;
+        height: auto;
+        left: 0;
+    }
+
+    .form input,
+    .inputdiv input {
+        width: 100%;
+    }
+}
+    </style>
+</body>
+</html>

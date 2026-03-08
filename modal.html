@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="open">adfasda</button>
+    <div class="box1" id="modal">
+        <div class="box2">
+            <span id="close">&times;</span>
+            <h1>
+                dfaehdfkafkha
+            </h1>
+        </div>
+    </div>
+    <script>
+        const open = document.getElementById("open");
+        const modal = document.getElementById("modal");
+        const close = document.getElementById("close");
+
+        open.addEventListener("click", () =>{
+            modal.style.display = "flex";
+        });
+
+        close.addEventListener("click", () =>{
+            modal.style.display = "none";
+        });
+
+        modal.addEventListener("click", (e) => {
+            if(e.target === modal){
+                modal.style.display = "none";
+            }
+        });
+    </script>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body button {
+            height: 40px;
+            width: 100px;
+            border-radius: 10px;
+            border: none;
+            background: pink;
+        }
+        .box1{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0%;
+            background: rgba(0,0,0,0.5);
+        }
+        .box2{
+
+               display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 350px;
+            background: white;
+            border: none;
+            border-radius: 20px;
+            background: pink;
+        }
+        .box2 span {
+                           display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+             bottom: 35px;
+             right: 50px;
+
+        }
+    </style>
+</body>
+</html>

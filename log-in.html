@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+            <div class="span">
+                 <span><a href="final.html">&times;</a></span>
+            </div>
+            <form action="">
+                <div class="svg">
+                    <svg viewBox = "0 0 1320 300">
+                        <text x ="50%" y ="50%" text-anchor= "middle">LOG-IN</text>
+                    </svg>
+                </div>
+                <input type="text" placeholder="First Name" id="una" required>
+                <input type="text" placeholder="Middle Name" id="duha" required>
+                <input type="text" placeholder="Last Name" id="tulo" required>
+                <input type="email" placeholder="Email" id="upat" required>
+                <input type="password" placeholder="Password" id="lima" required>
+                <button type="button" onclick="login()">Submit</button>
+                <a href="signup.html">already have account?</a>
+                <p id="alredy"></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        function login(){
+            let una = document.getElementById("una").value;
+            let duha = document.getElementById("duha").value;
+            let tulo = document.getElementById("tulo").value;
+            let upat = document.getElementById("upat").value;
+            let lima = document.getElementById("lima").value;
+
+            if(una === "james carl" && duha === "q" && tulo === "basalo" && upat === "123456@gmail.com" && lima === "haha" ){
+                window.location.href = "s26Ultra.html";
+            }else{
+                document.getElementById("alredy").innerHTML = "hahaha";
+            }
+        }
+    </script>
+    <style> 
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100%;
+            background: #e0e5ec;
+
+        }
+        .svg{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 180px;
+            width: 600px;
+            position: relative;
+            top: 40px;
+        }
+        svg text{
+            fill: transparent;
+            text-transform: uppercase;
+            height: 400px;
+            width: 300px;
+            font-size: 7rem;
+            animation: svg-ani 7s infinite alternate;
+        }
+        @keyframes svg-ani {
+            0%{
+                stroke: black;
+                stroke-width: 0;
+                stroke-dashoffset: -25%;
+                stroke-dasharray: 0 50%;
+            }
+            68%{
+                stroke: black;
+            }
+            75%{
+                stroke-width: 3;
+                stroke: black;
+            }
+            100%{
+                stroke: black;
+                stroke-width: 2;
+                stroke-dashoffset: 25%;
+                stroke-dasharray: 50% 0;
+            }
+        }
+
+        *{
+            font-family: sans-serif;
+        }
+        .span {
+            height: 20px;
+            width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            bottom: 275px;
+            left: 120px;
+        }
+        .logo img {
+            animation: james ease-in-out 1s;
+            position: relative;
+            top: -137px;
+            left: 21.3%;
+            height: 500px;
+            width: 500px;
+            z-index: -1;
+        }
+        .box1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+        @keyframes james {
+            from{
+                transform: scale(0);
+            }
+            to{
+                 transform: scale(1);
+            }
+        }
+        .box2 {
+            animation: james ease-in-out 1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 590px;
+            width: 400px;
+            box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #b8bcc2;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+        }
+        .box2 input {
+            display: block;
+            background: #e0e5ec;
+            height: 40px;
+            width: 250px;
+            border: none;
+            box-shadow: inset 4px 4px 4px #b8bcc2, inset -4px -4px 4px #ffffff;
+             border-radius: 12px;
+            margin-top: 25px;
+            outline: none;
+        }
+        .box2 input::placeholder {
+            color: #b8bcc2;
+            padding: 20px;
+            font-weight: bold;
+        }
+        .box2 a {
+            color: black;
+            font-weight: bold;
+            display: flex;
+            font-size: 15px;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .box2 button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            width: 150px;
+            border: none;
+            background: #e0e5ec;
+            border-radius: 10px;
+            box-shadow: -3px -3px 7px #ffffff, 3px 3px 7px #b8bcc2;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</body>
+</html>
